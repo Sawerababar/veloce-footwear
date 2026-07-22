@@ -117,7 +117,7 @@ export const Header: React.FC<HeaderProps> = ({
                   VELOCE
                 </span>
                 <span className="text-[9px] bg-amber-500/20 text-amber-300 border border-amber-500/40 px-1.5 py-0.2 rounded font-mono uppercase font-bold">
-                  STUDIO
+                  LUXURY
                 </span>
               </div>
               <p className="text-[10px] text-stone-400 font-medium tracking-widest uppercase">
