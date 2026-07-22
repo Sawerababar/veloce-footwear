@@ -1,0 +1,6 @@
+{
+  "name": "Veloce Footwear",
+  "description": "Artisanal and performance footwear store featuring Sneakers, Ethnic Juttis, Formals, and Running Shoes with AI SoleMate Stylist, PIN Code Delivery, and Express Checkout.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
