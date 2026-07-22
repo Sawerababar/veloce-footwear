@@ -148,7 +148,7 @@ export default function App() {
       />
 
       {/* Main Catalog Content */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+      <main id="catalog-section" className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
         
         {/* Section Heading & Category Filter Count */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-stone-200 pb-4">

@@ -1,5 +1,9 @@
 import React from 'react';
-import { ShieldCheck, Truck, RotateCcw, Sparkles, MapPin, Phone, Mail, Footprints, Lock, Smartphone, CreditCard, Building2, Banknote } from 'lucide-react';
+import { 
+  ShieldCheck, Truck, RotateCcw, Sparkles, MapPin, Phone, Mail, 
+  Footprints, Lock, Smartphone, CreditCard, Building2, Banknote, 
+  Clock, MessageCircle, Ruler, Headphones, CheckCircle2, HelpCircle
+} from 'lucide-react';
 import { ShoeCategory } from '../types';
 
 interface FooterProps {
@@ -29,7 +33,7 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="space-y-1">
             <Truck className="w-6 h-6 text-sky-400 mx-auto" />
             <h5 className="font-bold text-white text-xs">Free Express All-India Shipping</h5>
-            <p className="text-[11px] text-stone-400">Fast delivery across all 25,000+ PIN codes</p>
+            <p className="text-[11px] text-stone-400">Fast delivery across 25,000+ PIN codes</p>
           </div>
           <div className="space-y-1">
             <RotateCcw className="w-6 h-6 text-purple-400 mx-auto" />
@@ -50,28 +54,28 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Brand Overview */}
         <div className="md:col-span-4 space-y-3">
           <div className="flex items-center gap-2">
-            <div className="w-9 h-9 bg-amber-600 text-white rounded-xl flex items-center justify-center shadow-md shadow-amber-600/30">
-              <Footprints className="w-5 h-5 text-white" />
+            <div className="w-9 h-9 bg-gradient-to-br from-amber-500 to-orange-600 text-stone-950 rounded-xl flex items-center justify-center shadow-md">
+              <Footprints className="w-5 h-5" />
             </div>
-            <span className="font-serif text-xl font-bold text-white tracking-wide">Veloce</span>
+            <span className="font-serif text-xl font-bold text-white tracking-wide">VELOCE</span>
           </div>
 
           <p className="text-stone-400 leading-relaxed text-xs">
             Your destination for premium handcrafted ethnic juttis, performance sneakers, formal brogues, and driving loafers. Delivering stylish, durable footwear nationwide with AI styling assistance.
           </p>
 
-          <div className="pt-2 text-stone-400 space-y-1.5 text-xs">
+          <div className="pt-2 text-stone-400 space-y-2 text-xs">
             <p className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-amber-500 shrink-0" />
-              <span>Express Logistics & Nationwide Distribution</span>
+              <span>Chandigarh Hub • Express All-India Logistics</span>
             </p>
             <p className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-amber-500 shrink-0" />
-              <span>Customer Helpline: +91 98765 43210 (Mon-Sat 9am-8pm)</span>
+              <span>Customer Helpline: <strong>+91 98765 43210</strong></span>
             </p>
             <p className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-amber-500 shrink-0" />
-              <span>Email Support: care@velocefootwear.com</span>
+              <span>Email Support: <strong>support@velocefootwear.in</strong></span>
             </p>
           </div>
         </div>
@@ -82,100 +86,189 @@ export const Footer: React.FC<FooterProps> = ({
             Collections
           </h5>
           <ul className="space-y-2 text-stone-400">
-            <li><button onClick={() => onSelectCategory('Sneakers')} className="hover:text-amber-400 transition-colors cursor-pointer">Sneakers</button></li>
-            <li><button onClick={() => onSelectCategory('Ethnic Juttis')} className="hover:text-amber-400 transition-colors cursor-pointer">Ethnic Juttis</button></li>
-            <li><button onClick={() => onSelectCategory('Running & Sports')} className="hover:text-amber-400 transition-colors cursor-pointer">Sports & Running</button></li>
-            <li><button onClick={() => onSelectCategory('Formal Brogues')} className="hover:text-amber-400 transition-colors cursor-pointer">Formal Brogues</button></li>
-            <li><button onClick={() => onSelectCategory('Casual Loafers')} className="hover:text-amber-400 transition-colors cursor-pointer">Casual Loafers</button></li>
-            <li><button onClick={() => onSelectCategory('Sandals & Floaters')} className="hover:text-amber-400 transition-colors cursor-pointer">Sandals & Floaters</button></li>
+            <li>
+              <button 
+                onClick={() => {
+                  onSelectCategory('Sneakers');
+                  document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+                }} 
+                className="hover:text-amber-400 transition-colors cursor-pointer"
+              >
+                Sneakers
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => {
+                  onSelectCategory('Ethnic Juttis');
+                  document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+                }} 
+                className="hover:text-amber-400 transition-colors cursor-pointer"
+              >
+                Ethnic Juttis
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => {
+                  onSelectCategory('Running & Sports');
+                  document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+                }} 
+                className="hover:text-amber-400 transition-colors cursor-pointer"
+              >
+                Sports & Running
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => {
+                  onSelectCategory('Formal Brogues');
+                  document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+                }} 
+                className="hover:text-amber-400 transition-colors cursor-pointer"
+              >
+                Formal Brogues
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => {
+                  onSelectCategory('Casual Loafers');
+                  document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+                }} 
+                className="hover:text-amber-400 transition-colors cursor-pointer"
+              >
+                Casual Loafers
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => {
+                  onSelectCategory('Sandals & Floaters');
+                  document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+                }} 
+                className="hover:text-amber-400 transition-colors cursor-pointer"
+              >
+                Sandals & Floaters
+              </button>
+            </li>
           </ul>
         </div>
 
-        {/* Customer Assistance & Tools */}
-        <div className="md:col-span-2 space-y-3">
-          <h5 className="font-bold text-white text-xs uppercase tracking-wider border-b border-stone-800 pb-1.5">
-            Customer Care
-          </h5>
-          <ul className="space-y-2 text-stone-400">
-            <li>
-              <button onClick={onOpenStylist} className="hover:text-amber-400 transition-colors cursor-pointer flex items-center gap-1">
-                <Sparkles className="w-3.5 h-3.5 text-amber-400" /> AI Shoe Stylist
-              </button>
-            </li>
-            <li>
-              <button onClick={onOpenPincodeChecker} className="hover:text-amber-400 transition-colors cursor-pointer">
-                PIN Code Serviceability
-              </button>
-            </li>
-            <li>
-              <button onClick={onOpenOrderTracker} className="hover:text-amber-400 transition-colors cursor-pointer">
-                Track Order Status
-              </button>
-            </li>
-            <li>
-              <button onClick={onOpenPincodeChecker} className="hover:text-amber-400 transition-colors cursor-pointer">
-                UK Size Guide
-              </button>
-            </li>
-          </ul>
+        {/* 🌟 Redesigned Aesthetic Customer Care Section List */}
+        <div className="md:col-span-3 space-y-3">
+          <div className="flex items-center justify-between border-b border-stone-800 pb-1.5">
+            <h5 className="font-bold text-white text-xs uppercase tracking-wider flex items-center gap-1.5">
+              <Headphones className="w-3.5 h-3.5 text-amber-400" /> Customer Care
+            </h5>
+            <span className="text-[9px] bg-emerald-950 text-emerald-300 border border-emerald-500/30 px-1.5 py-0.2 rounded font-mono font-bold">
+              24/7 SUPPORT
+            </span>
+          </div>
+
+          <div className="bg-stone-900/90 border border-stone-800 rounded-2xl p-3.5 space-y-2.5">
+            <ul className="space-y-2.5 divide-y divide-stone-800/80">
+              
+              <li className="pt-1 flex items-start gap-2.5">
+                <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div>
+                  <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="font-bold text-white hover:text-emerald-300 text-xs block">
+                    WhatsApp Helpline
+                  </a>
+                  <p className="text-[10px] text-stone-400">Instant chat & size consultation (under 15 mins)</p>
+                </div>
+              </li>
+
+              <li className="pt-2 flex items-start gap-2.5">
+                <Truck className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                <div>
+                  <button onClick={onOpenOrderTracker} className="font-bold text-white hover:text-sky-300 text-xs text-left block cursor-pointer">
+                    Track Order & Logistics
+                  </button>
+                  <p className="text-[10px] text-stone-400">Live BlueDart & Express Air status</p>
+                </div>
+              </li>
+
+              <li className="pt-2 flex items-start gap-2.5">
+                <RotateCcw className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
+                <div>
+                  <button onClick={onOpenPincodeChecker} className="font-bold text-white hover:text-purple-300 text-xs text-left block cursor-pointer">
+                    14-Day Easy Exchange
+                  </button>
+                  <p className="text-[10px] text-stone-400">Free doorstep size replacement</p>
+                </div>
+              </li>
+
+              <li className="pt-2 flex items-start gap-2.5">
+                <Ruler className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <div>
+                  <button onClick={onOpenPincodeChecker} className="font-bold text-white hover:text-amber-300 text-xs text-left block cursor-pointer">
+                    UK 6 - 11 Size Guide
+                  </button>
+                  <p className="text-[10px] text-stone-400">Foot width & width measurement chart</p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
         </div>
 
         {/* Accepted Payment Methods Section */}
-        <div className="md:col-span-4 space-y-3">
+        <div className="md:col-span-3 space-y-3">
           <div className="flex items-center justify-between border-b border-stone-800 pb-1.5">
             <h5 className="font-bold text-white text-xs uppercase tracking-wider">
-              Accepted Payments
+              Payments
             </h5>
             <span className="text-[10px] text-emerald-400 font-bold flex items-center gap-1">
-              <Lock className="w-3 h-3" /> 100% Encrypted
+              <Lock className="w-3 h-3" /> Encrypted
             </span>
           </div>
 
           <p className="text-stone-400 text-[11px]">
-            We accept all major secure payment options across India:
+            Direct secure payment links for major Indian portals:
           </p>
 
           {/* Payment Badges Grid */}
           <div className="grid grid-cols-2 gap-2 text-xs">
-            <div className="bg-stone-900 border border-stone-800 rounded-xl p-2.5 flex items-center gap-2 hover:border-amber-500/50 transition-colors">
+            <a href="https://paytm.com" target="_blank" rel="noreferrer" className="bg-stone-900 border border-stone-800 rounded-xl p-2 flex items-center gap-2 hover:border-amber-500/50 transition-colors">
               <Smartphone className="w-4 h-4 text-sky-400 shrink-0" />
               <div>
-                <span className="font-bold text-white text-[11px] block">Paytm & PhonePe</span>
-                <span className="text-[9px] text-stone-400">Instant UPI Direct</span>
+                <span className="font-bold text-white text-[11px] block">Paytm</span>
+                <span className="text-[9px] text-stone-400">Direct Link</span>
               </div>
-            </div>
+            </a>
 
-            <div className="bg-stone-900 border border-stone-800 rounded-xl p-2.5 flex items-center gap-2 hover:border-amber-500/50 transition-colors">
+            <a href="https://pay.google.com" target="_blank" rel="noreferrer" className="bg-stone-900 border border-stone-800 rounded-xl p-2 flex items-center gap-2 hover:border-amber-500/50 transition-colors">
               <Smartphone className="w-4 h-4 text-emerald-400 shrink-0" />
               <div>
-                <span className="font-bold text-white text-[11px] block">Google Pay & BHIM</span>
-                <span className="text-[9px] text-stone-400">0% Gateway Fee</span>
+                <span className="font-bold text-white text-[11px] block">Google Pay</span>
+                <span className="text-[9px] text-stone-400">Direct Link</span>
               </div>
-            </div>
+            </a>
 
-            <div className="bg-stone-900 border border-stone-800 rounded-xl p-2.5 flex items-center gap-2 hover:border-amber-500/50 transition-colors">
-              <CreditCard className="w-4 h-4 text-purple-400 shrink-0" />
+            <a href="https://www.phonepe.com" target="_blank" rel="noreferrer" className="bg-stone-900 border border-stone-800 rounded-xl p-2 flex items-center gap-2 hover:border-amber-500/50 transition-colors">
+              <Smartphone className="w-4 h-4 text-purple-400 shrink-0" />
               <div>
-                <span className="font-bold text-white text-[11px] block">RuPay, Visa, MC</span>
-                <span className="text-[9px] text-stone-400">Debit & Credit Cards</span>
+                <span className="font-bold text-white text-[11px] block">PhonePe</span>
+                <span className="text-[9px] text-stone-400">Direct Link</span>
               </div>
-            </div>
+            </a>
 
-            <div className="bg-stone-900 border border-stone-800 rounded-xl p-2.5 flex items-center gap-2 hover:border-amber-500/50 transition-colors">
+            <a href="https://netbanking.hdfcbank.com" target="_blank" rel="noreferrer" className="bg-stone-900 border border-stone-800 rounded-xl p-2 flex items-center gap-2 hover:border-amber-500/50 transition-colors">
               <Building2 className="w-4 h-4 text-amber-400 shrink-0" />
               <div>
                 <span className="font-bold text-white text-[11px] block">NetBanking</span>
-                <span className="text-[9px] text-stone-400">HDFC, SBI, ICICI, Axis</span>
+                <span className="text-[9px] text-stone-400">10+ Banks</span>
               </div>
-            </div>
+            </a>
 
-            <div className="col-span-2 bg-stone-900 border border-amber-600/30 rounded-xl p-2.5 flex items-center justify-between">
+            <div className="col-span-2 bg-stone-900 border border-amber-600/30 rounded-xl p-2 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Banknote className="w-4 h-4 text-amber-400 shrink-0" />
-                <span className="font-bold text-white text-[11px]">Cash on Delivery (COD)</span>
+                <span className="font-bold text-white text-[11px]">Cash on Delivery</span>
               </div>
-              <span className="bg-amber-500/20 text-amber-400 border border-amber-500/30 text-[9px] font-bold px-2 py-0.5 rounded-full">
-                Available Nationwide
+              <span className="bg-amber-500/20 text-amber-400 text-[9px] font-bold px-2 py-0.5 rounded-full">
+                All-India
               </span>
             </div>
           </div>
